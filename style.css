@@ -6,23 +6,9 @@
     padding-bottom: 0%;
 }
 
-
-body:hover {
-    background-color: hsla(239, 100%, 50%, 0.73);
-    background-image:
-        radial-gradient(at 75% 100%, hsla(28, 100%, 100%, 1) 0px, transparent 50%),
-        radial-gradient(at 39% 99%, hsla(189, 100%, 100%, 1) 0px, transparent 50%),
-        radial-gradient(at 95% 96%, hsla(355, 100%, 100%, 1) 0px, transparent 50%);
-    transition: background-color 9s 1s;
-}
-
 body {
 
-    background-color: hsla(0, 15%, 95%, 1);
-    background-image:
-        radial-gradient(at 58% 100%, hsla(28, 100%, 0%, 1) 0px, transparent 50%),
-        radial-gradient(at 34% 100%, hsla(189, 100%, 0%, 1) 0px, transparent 50%),
-        radial-gradient(at 89% 97%, hsla(355, 100%, 0%, 1) 0px, transparent 50%);
+    background-color: #fdf0d5;
     font-family: "Poppins", sans-serif;
 
 }
@@ -32,7 +18,7 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: #000000;
 }
 
 p:hover {
@@ -42,131 +28,73 @@ p:hover {
 
 a,
 .btn {
+    transition: 1s;
     transform: all 300ms ease;
 }
 
-nav,
-.nav_links {
-    display: flex;
-
+header {
+    background-color: #9e2a2b;
 }
 
-nav {
-    margin-top: 0;
-    align-items: center;
-    justify-content: space-around;
-    height: 17vh;
-
-    position: sticky;
-    top: 0vh;
-}
-
-.nav_links {
-    gap: 2rem;
-    font-size: 1.2rem;
+li {
     list-style: none;
 }
 
 a {
-    color: black;
+    color: #000000;
     text-decoration: none;
-    text-decoration-color: white;
-
 }
 
-a:hover {
-    color: grey;
-    text-decoration-color: grey;
-    text-decoration: underline;
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
 }
 
 .logo {
-    font-size: 2rem;
+    width: 100%;
+    height: 4px;
+    padding-left: 30px;
+    font-weight: 700;
+
+
 }
 
-.logo:hover {
-    cursor: default;
+.nav_link:hover {
+    color: #6c757d;
+
 }
 
-#hamburger_nav {
-    display: none;
-}
 
 .hamburger_menu {
-    position: relative;
-    display: inline-block;
-}
-
-
-.hamburger_icon {
-    height: 24px;
     width: 30px;
-    display: flex;
+    height: 20px;
+    display: none;
+    flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    flex-direction: column;
 }
 
-.hamburger_icon span {
-    width: 100%;
-    height: 2px;
-    transition: 0.3 ease-in-out;
-    background-color: black;
-}
-
-.Menu_links {
-    position: absolute;
-    top: 100%;
-    right: 0%;
-    background-color: white;
-    max-height: 0%;
-    width: fit-content;
-    overflow: hidden;
-    transition: t;
-}
-
-.Menu_links a {
+.hamburger_menu .line {
     display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.2rem;
-    color: black;
-    text-decoration: none;
-    transition: 0.3 ease-in-out;
+    width: 100%;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #000;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.Menu_links li {
-    list-style: none;
-
-}
-
-.Menu_links.open {
-    max-height: 300px;
-}
-
-.hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-    transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-    transform: none;
-}
-
-.hamburger-icon span:first-child {
-    opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-    transform: none;
-}
 
 section {
     padding-top: 4vh;
@@ -337,6 +265,26 @@ article .icon {
     cursor: default;
 }
 
+button {
+    background: none;
+    color: #ffa260;
+    border: 2px solid;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 1.5em;
+
+    transition: all 0.25s;
+
+}
+
+button:hover {
+    border-radius: 1.5em;
+    border-color: #fb8500;
+    color: #000000;
+    box-shadow: 0 0.5em 0.5em -0.4em #fb8500;
+    transform: translateY(-0.24em);
+}
+
 
 /* CONTACT */
 
@@ -378,26 +326,21 @@ article .icon {
     height: 2.5rem;
 }
 
+.icon_contact-icon {
+    height: 2.5rem;
+}
+
 /* FOOTER SECTION */
-#footer,
-.p,
-p {
+#footer footer {
     padding-bottom: 0%;
-    margin-bottom: 0%;
+
+
 }
 
 footer {
-    height: 26vh;
-    margin: 0 1rem;
-    color: blue;
-}
-
-
-
-footer p {
-    margin-bottom: 0;
-    bottom: 0;
+    padding: 20px;
     text-align: center;
+    font-size: small;
     color: blue;
-    margin-bottom: 0%;
+    background-color: #9e2a2b;
 }

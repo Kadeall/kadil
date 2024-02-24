@@ -14,15 +14,50 @@
     }
 }
 
-@media screen and (max-width:1200px) {
-    #desktop_nav {
-        display: none;
+@media(max-width:700px) {
+    .hamburger_menu {
+        display: block;
+        padding-right: 30px;
     }
 
-    #hamburger_nav {
-        display: flex;
+
+    .hamburger-menu.active.line:nth-child(2) {
+        opacity: 0;
     }
+
+    .hamburger_menu.active.line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger_menu.active.line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav_menu {
+        position: fixed;
+        right: 100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fdf0d5;
+        width: 30%;
+        text-align: center;
+        transition: 0s;
+
+    }
+
+    .nav_item {
+        max-resolution: 16px 0;
+
+    }
+
+    .nav_menu.active {
+        right: 0%;
+
+    }
+
 }
+
 
 #experience,
 .experience-details-container {
@@ -62,7 +97,8 @@ section {
 
     #contact,
     footer {
-        height: 40vh;
+        height: 0vh;
+        width: 100%;
     }
 
     #profile {
